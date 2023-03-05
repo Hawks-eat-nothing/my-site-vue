@@ -1,7 +1,8 @@
 <template>
-  <nav class="flex m-3 h-14 top rounded-lg shadow-md bg-gray-100 opacity-80 items-center justify-between">
+
+  <nav class="flex mx-1 h-12 sticky top-1.5 rounded-full shadow-md bg-gray-100 bg-opacity-50 items-center justify-between backdrop-blur-md">
     <!--    logo-->
-    <div>
+    <div class="ml-3">
       <router-link to="/">
         <img src="@/assets/icon.png" alt="my site name" class="h-10">
       </router-link>
@@ -19,8 +20,16 @@
 </template>
 
 <script>
+
+import icon from '@/assets/icon.png'
+
 export default {
-  name: "navgation"
+  name: 'navigator',
+  data() {
+    return {
+      icon: require("@/assets/icon.png")
+    }
+  }
 }
 </script>
 

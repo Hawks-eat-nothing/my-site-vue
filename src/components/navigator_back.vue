@@ -9,11 +9,9 @@
     </div>
     <!--    navigation-->
     <div class="hidden lg:flex lg:gap-x-12">
-      <div><router-link to="/" class="font-sm font-semibold leading-6 text-gray-500 hover:text-gray-900 flex items-center"> Home </router-link></div>
-      <div><router-link to="/photos" class="font-sm font-semibold leading-6 text-gray-500 hover:text-gray-900 flex items-center"> Photos </router-link></div>
-      <div><router-link to="/blogs" class="font-sm font-semibold leading-6 text-gray-500 hover:text-gray-900 flex items-center"> Blogs </router-link></div>
-      <div><router-link to="/tools" class="font-sm font-semibold leading-6 text-gray-500 hover:text-gray-900 flex items-center"> Tools </router-link></div>
-      <div><router-link to="/about" class="font-sm font-semibold leading-6 text-gray-500 hover:text-gray-900 flex items-center"> About </router-link></div>
+      <div><router-link to="/" class="font-sm font-semibold leading-6 text-gray-500 hover:text-gray-900 flex items-center"> DashBoard </router-link></div>
+      <div><router-link to="/photosupload" class="font-sm font-semibold leading-6 text-gray-500 hover:text-gray-900 flex items-center"> PhotosUpload </router-link></div>
+      <div><router-link to="/blogsupload" class="font-sm font-semibold leading-6 text-gray-500 hover:text-gray-900 flex items-center"> BlogsUpload </router-link></div>
     </div>
     <div></div>
   </nav>
@@ -24,7 +22,7 @@
 import icon from '@/assets/icon.png'
 
 export default {
-  name: 'navigator',
+  name: 'navigator_back',
   data() {
     return {
       icon: require("@/assets/icon.png")
