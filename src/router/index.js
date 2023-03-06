@@ -56,12 +56,12 @@ const routes = [
   {
     path: '/dashboard',
     name: 'dashboard',
-    component: ()=>import('../views/DashBoardBackView')
+    component: ()=>import('../views/admin/DashBoardBackView')
   },
   {
     path: '/photosupload',
     name: 'photosupload',
-    component: ()=>import('../views/PhotosUploadView')
+    component: ()=>import('../views/admin/PhotosUploadView')
   }
 ]
 

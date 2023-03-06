@@ -9,11 +9,13 @@ import ElementUI from 'element-ui';
 import 'element-ui/lib/theme-chalk/index.css'
 import axios from 'axios'
 import VueAxios from 'vue-axios'
+import VueLazyload from "vue-lazyload";
 
 Vue.config.productionTip = false
 Vue.use(VueClipboard)
 Vue.use(ElementUI)
 Vue.use(VueAxios, axios)
+Vue.use(VueLazyload)
 
 axios.defaults.baseURL='http://127.0.0.1:8085';
 
