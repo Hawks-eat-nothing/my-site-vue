@@ -24,7 +24,7 @@ const routes = [
     component: ()=>import('../views/PhotosView')
   },
   {
-    path: '/photoDetail',
+    path: '/photoDetail/:id',
     name: 'photoDetail',
     component: ()=>import('../views/PhotoDetailView')
   },
