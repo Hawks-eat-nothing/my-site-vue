@@ -56,30 +56,6 @@ export default {
       console.error(error)
     })
   },
-  // mounted() {
-  //   axios.get("/photos/")
-  //       .then(response=>{
-  //         this.photos=response.data
-  //         this.$nextTick(()=>{
-  //           new Masonry('.grid',{
-  //             itemSelector: '.masonry-item',
-  //             percentPosition: true,
-  //             columnWidth: '.grid-sizer',
-  //             gutter: '.gutter-sizer'
-  //           })
-  //         })
-  //       }).catch(error=>{
-  //         console.log(error)
-  //   })
-  // }
+
 }
 </script>
-<!--<style>-->
-<!--.grid-sizer,-->
-<!--.gutter-sizer {-->
-<!--  width: calc(100% - 16px);-->
-<!--}-->
-<!--.masonry-item {-->
-<!--  margin-bottom: 16px;-->
-<!--}-->
-<!--</style>-->

@@ -13,6 +13,8 @@
     "core-js": "^3.8.3",
     "element-ui": "^2.15.13",
     "imagesloaded": "^5.0.0",
+    "markdown-it": "^13.0.1",
+    "markdown-it-highlightjs": "^4.0.1",
     "masonry-layout": "^4.2.2",
     "twemoji": "^14.0.2",
     "vue": "^2.6.14",

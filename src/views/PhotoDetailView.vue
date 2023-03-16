@@ -38,8 +38,8 @@ export default {
     axios.get('/photos/detail/' + id)
         .then(response => {
           this.photo = response.data;
-          console.log(id);
-          console.log(this.photo.url)
+          // console.log(id);
+          // console.log(this.photo.url)
         })
         .catch(error => {
           console.error(error)

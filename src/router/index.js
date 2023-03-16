@@ -34,7 +34,7 @@ const routes = [
     component: ()=>import('../views/BlogsView')
   },
   {
-    path: '/blogDetail',
+    path: '/blogDetail/:id',
     name: 'blogDetail',
     component: ()=>import('../views/BlogDetailView')
   },
@@ -62,6 +62,11 @@ const routes = [
     path: '/photosupload',
     name: 'photosupload',
     component: ()=>import('../views/admin/PhotosUploadView')
+  },
+  {
+    path: '/blogsupload',
+    name: 'blogsupload',
+    component: ()=>import('../views/admin/BlogsUploadView')
   }
 ]
 
