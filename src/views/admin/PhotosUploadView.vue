@@ -100,7 +100,7 @@ export default {
       formData.append('resolution', this.formLabelAlign.resolution);
       formData.append('position', this.formLabelAlign.location);
       formData.append('description', this.formLabelAlign.description);
-      console.log(formData);
+
       const formDataObject = Object.fromEntries(formData);
       const formDataJson = JSON.stringify(formDataObject);
       const jsonObject = JSON.parse(formDataJson);
