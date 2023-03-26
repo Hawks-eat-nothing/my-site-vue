@@ -40,9 +40,9 @@
       </div>
       <!--      评论展示-->
       <div id="comment-list"
-           class="mt-2 w-3/5 mx-auto rounded-2xl overflow-hidden border-dashed border-2 border-gray-300 pl-3">
+           class="mt-2 w-3/5 mx-auto rounded-2xl overflow-hidden border-dashed border-2 border-gray-300">
         <!--        父评论-->
-        <div v-for="comment in comments" :key="comment.id">
+        <div v-for="comment in comments" :key="comment.id" class="border-l-2 border-emerald-500 m-3">
           <div  class="flex m-2 w-full ">
             <div class="font-semibold font-sans">{{ comment.nickname }}</div>
             <div class="mt-1 ml-1 text-sm font-sans font-light text-gray-300">{{ comment.createTime }}</div>
@@ -50,7 +50,7 @@
           <div class="ml-5">{{ comment.content }}</div>
           <button class="ml-5 text-gray-400 font-sans text-sm" @click="focusInputBox(comment.nickname,comment.rootId,comment.id)">回复</button>
           <!--        子集评论-->
-          <div class="ml-10" v-if="comment.children!=null" v-for="c in comment.children">
+          <div class="ml-10 mr-3 border-l-2 border-blue-400" v-if="comment.children!=null" v-for="c in comment.children">
             <div  class="flex m-2 w-full ">
               <div class="font-semibold font-sans">{{ c.nickname }}<span class="text-gray-500 font-sans font-medium"> 回复 </span>{{c.toCommentNickname}}</div>
               <div class="mt-1 ml-1 text-sm font-sans font-light text-gray-300">{{ c.createTime }}</div>
@@ -74,6 +74,7 @@ import Footer from "@/components/Footer";
 import MarkdownIt from 'markdown-it';
 import mdHighlight from 'markdown-it-highlightjs';
 import axios from "axios";
+import { mapState } from 'vuex';
 
 export default {
   name: "BlogDetailView",
@@ -106,7 +107,11 @@ export default {
   },
   mounted() {
     const id = this.$route.params.id
-    axios.get('/blogs/detail/' + id).then(response => {
+    axios.get('/blogs/detail/' + id,{
+      headers:{
+        'token':localStorage.getItem('Authorization')
+      }
+    }).then(response => {
       this.blog = response.data;
       this.markdownText = this.blog.content;
       this.renderedHtml = this.md.render(this.markdownText);
@@ -116,13 +121,16 @@ export default {
 
     //评论区
     //获取评论
-    axios.get('/comment/commentList/' + id).then(response => {
+    axios.get('/comment/commentList/' + id,{
+      headers:{
+        'token':localStorage.getItem('Authorization')
+      }
+    }).then(response => {
       this.comments = response.data;
       // console.log(this.comments)
     }).catch(error=>{
       console.error(error)
     })
-
   },
   methods: {
 
@@ -173,6 +181,9 @@ export default {
       console.log(jsonObject);
       axios.post("/comment/add",jsonObject).then(response=>{
         // alert("评论成功")
+        this.name='';
+        this.email='';
+        this.replyComment.content='';
         axios.get('/comment/commentList/' + id).then(response => {
           this.comments = response.data;
           // console.log(this.comments)

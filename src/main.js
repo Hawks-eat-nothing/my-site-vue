@@ -10,6 +10,8 @@ import 'element-ui/lib/theme-chalk/index.css'
 import axios from 'axios'
 import VueAxios from 'vue-axios'
 import VueLazyload from "vue-lazyload";
+import Vuex from 'vuex';
+Vue.use(Vuex);
 
 Vue.config.productionTip = false
 Vue.use(VueClipboard)

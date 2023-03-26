@@ -67,8 +67,32 @@ const routes = [
     path: '/blogsupload',
     name: 'blogsupload',
     component: ()=>import('../views/admin/BlogsUploadView')
+  },
+  {
+    path: '/login',
+    name:'login',
+    component: ()=>import('../views/LoginView')
+  },
+  {
+    path: '/hello',
+    name: 'hello',
+    component: ()=>import('../views/HelloView')
   }
 ]
+
+// router.beforeEach((to,from,next)=>{
+//   if (to.path==='/login'){
+//     //放行
+//     next();
+//   }else {
+//     let token = localStorage.getItem("Authorization")
+//     if (token==='null'||token===''){
+//       next('login')
+//     }else {
+//       next()
+//     }
+//   }
+// })
 
 const router = new VueRouter({
   mode: 'history',
