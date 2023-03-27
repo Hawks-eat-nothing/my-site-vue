@@ -20,6 +20,7 @@
           </button>
         </div>
       </form>
+      <p class="hover:text-gray-50 animate-pulse"><router-link to="/register">还没账号？去注册</router-link></p>
     </div>
   </div>
 </template>
