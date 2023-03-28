@@ -118,6 +118,10 @@ export default {
     }).catch(error => {
       console.error(error)
     })
+    //更新浏览量
+    axios.put('/blogs/updateViewCount/'+id).catch(error=>{
+      console.error(error);
+    });
 
     //评论区
     //获取评论
