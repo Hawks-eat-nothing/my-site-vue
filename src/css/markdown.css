@@ -1,0 +1,81 @@
+/* Markdown样式表 */
+
+/* 标题 */
+h1 {
+    font-size: 2em;
+}
+
+h2 {
+    font-size: 1.5em;
+}
+
+h3 {
+    font-size: 1.17em;
+}
+
+h4 {
+    font-size: 1em;
+}
+
+h5 {
+    font-size: 0.83em;
+}
+
+h6 {
+    font-size: 0.67em;
+}
+
+/* 段落 */
+p {
+    margin: 1em 0;
+}
+
+/* 列表 */
+ul, ol {
+    margin: 1em 0;
+}
+
+li {
+    margin: 0.5em 0;
+}
+
+/* 强调 */
+em {
+    font-style: italic;
+}
+
+strong {
+    font-weight: bold;
+}
+
+/* 链接 */
+a {
+    color: #337ab7;
+    text-decoration: none;
+}
+
+a:hover {
+    text-decoration: underline;
+}
+
+/* 代码块 */
+pre {
+    background-color: #f7f7f7;
+    border: 1px solid #ccc;
+    padding: 1em;
+}
+
+code {
+    font-family: Consolas, Monaco, 'Andale Mono', monospace;
+    font-size: 0.9em;
+    background-color: #f7f7f7;
+    padding: 0.2em 0.4em;
+    border-radius: 3px;
+}
+
+/* 引用 */
+blockquote {
+    margin: 1em 0;
+    padding-left: 1em;
+    border-left: 3px solid #ccc;
+}
