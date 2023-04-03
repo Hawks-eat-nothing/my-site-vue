@@ -118,7 +118,7 @@ export default {
                 //     'token': localStorage.getItem('Authorization')
                 // }
             }).then(response => {
-                alert("提交成功")
+                alert("提交成功");
             }).catch(error => {
                 console.log(error);
             })
