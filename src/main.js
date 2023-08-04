@@ -45,7 +45,7 @@ Vue.use(ElementUI)
 Vue.use(VueAxios, axios)
 Vue.use(VueLazyload)
 
-axios.defaults.baseURL='http://127.0.0.1:8085';
+axios.defaults.baseURL='http://192.168.124.12:8085';
 
 new Vue({
   router,
